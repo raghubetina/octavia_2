@@ -1,0 +1,79 @@
+<!-- Validation failure messages -->
+<% if @review.present? %>
+  <% if @review.errors.any? %>
+    <% @review.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new review
+</h1>
+
+
+<hr>
+
+<!-- Form review start -->
+<form action="/create_review" method="post">
+<!-- Form review end -->
+
+  <!-- Label and input for body start -->
+  <div class="form-group">
+    <label for="body">
+      Body
+    </label>
+
+    <!-- Input for body start -->
+    <input type="text" id="body" name="body" class="form-control" value="<%= @review.body %>">
+    <!-- Input for body end -->
+  </div>
+  <!-- Label and input for body end -->
+
+  <!-- Label and input for user_id start -->
+  <div class="form-group">
+    <label for="user_id">
+      User
+    </label>
+
+    <!-- Input for user_id start -->
+    <input type="text" id="user_id" name="user_id" class="form-control" value="<%= @review.user_id %>">
+    <!-- Input for user_id end -->
+  </div>
+  <!-- Label and input for user_id end -->
+
+  <!-- Label and input for product_id start -->
+  <div class="form-group">
+    <label for="product_id">
+      Product
+    </label>
+
+    <!-- Input for product_id start -->
+    <input type="text" id="product_id" name="product_id" class="form-control" value="<%= @review.product_id %>">
+    <!-- Input for product_id end -->
+  </div>
+  <!-- Label and input for product_id end -->
+
+  <!-- Label and input for would_use_again start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="would_use_again">
+    <!-- Input for would_use_again start -->
+    <input id="would_use_again" class="form-check-input" name="would_use_again" type="checkbox" <%= "checked" if @review.would_use_again %>>
+    <!-- Input for would_use_again end -->
+    <label for="would_use_again" class="form-check-label">
+      Would use again
+    </label>
+  </div>
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create review
+  </button>
+</form>
+
+<hr>
+
+<a href="/reviews">
+  Go back
+</a>
