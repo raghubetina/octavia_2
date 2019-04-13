@@ -11,6 +11,10 @@ class Product < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :densities,
+             :through => :users,
+             :source => :density
+
   has_many   :porosities,
              :through => :users,
              :source => :porosity
