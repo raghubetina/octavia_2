@@ -4,6 +4,8 @@ RSpec.describe User, type: :model do
   
     describe "Direct Associations" do
 
+    it { should belong_to(:porosity) }
+
     it { should belong_to(:curl_pattern) }
 
     it { should have_many(:reviews) }
