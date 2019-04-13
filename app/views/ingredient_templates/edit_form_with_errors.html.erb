@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @ingredient.errors.any? %>
   <% @ingredient.errors.full_messages.each do |message| %>
     <div class="alert">
@@ -13,33 +12,23 @@
 
 <hr>
 
-<!-- Form ingredient start -->
 <form action="/update_ingredient/<%= @ingredient.id %>" method="post">
-<!-- Form ingredient end -->
 
-  <!-- Label and input for product_id start -->
   <div class="form-group">
     <label for="product_id">
       Product
     </label>
 
-    <!-- Input for product_id start -->
     <%= select_tag(:product_id, options_from_collection_for_select(Product.all, :id, :name, @ingredient.product_id), :class => "form-control") %>
-    <!-- Input for product_id end -->
   </div>
-  <!-- Label and input for product_id end -->
 
-  <!-- Label and input for substance_id start -->
   <div class="form-group">
     <label for="substance_id">
       Substance
     </label>
 
-    <!-- Input for substance_id start -->
     <%= select_tag(:substance_id, options_from_collection_for_select(Substance.all, :id, :name, @ingredient.substance_id), :class => "form-control") %>
-    <!-- Input for substance_id end -->
   </div>
-  <!-- Label and input for substance_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update ingredient

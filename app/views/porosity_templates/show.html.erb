@@ -11,73 +11,58 @@
         </a>
       </div>
 
-      <!-- Edit link porosity start -->
       <div class="col">
         <a href="/porosities/<%= @porosity.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit porosity
         </a>
       </div>
-      <!-- Edit link porosity end -->
 
-      <!-- Delete link porosity start -->
       <div class="col">
         <a href="/delete_porosity/<%= @porosity.id %>" class="btn btn-block btn-outline-secondary">
           Delete porosity
         </a>
       </div>
-      <!-- Delete link porosity end -->
     </div>
 
     <dl>
       <dt>
         Level
       </dt>
-      <!-- Display level start -->
       <dd>
         <%= @porosity.level %>
       </dd>
-      <!-- Display level end -->
 
       <dt>
         Description
       </dt>
-      <!-- Display description start -->
       <dd>
         <%= @porosity.description %>
       </dd>
-      <!-- Display description end -->
 
       <dt>
         Position
       </dt>
-      <!-- Display position start -->
       <dd>
         <%= @porosity.position %>
       </dd>
-      <!-- Display position end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@porosity.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@porosity.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "porosity_templates/porosity_users" %>
@@ -89,4 +74,3 @@
     <%= render partial: "porosity_templates/porosity_products" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

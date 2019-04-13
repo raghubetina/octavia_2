@@ -1,83 +1,54 @@
-<!-- Form user start -->
 <form action="/create_user_from_age_group" method="post">
-<!-- Form user end -->
 
-  <!-- Label and input for email start -->
   <div class="form-group">
     <label for="email">
       Email
     </label>
 
-    <!-- Input for email start -->
     <input type="text" id="email" name="email" class="form-control" value="<%= @user.email %>">
-    <!-- Input for email end -->
   </div>
-  <!-- Label and input for email end -->
 
-  <!-- Label and input for password start -->
   <div class="form-group">
     <label for="password">
       Password
     </label>
 
-    <!-- Input for password start -->
     <input type="text" id="password" name="password" class="form-control" value="<%= @user.password %>">
-    <!-- Input for password end -->
   </div>
-  <!-- Label and input for password end -->
 
-  <!-- Label and input for username start -->
   <div class="form-group">
     <label for="username">
       Username
     </label>
 
-    <!-- Input for username start -->
     <input type="text" id="username" name="username" class="form-control" value="<%= @user.username %>">
-    <!-- Input for username end -->
   </div>
-  <!-- Label and input for username end -->
 
-  <!-- Label and input for curl_pattern_id start -->
   <div class="form-group">
     <label for="curl_pattern_id">
       Curl pattern
     </label>
 
-    <!-- Input for curl_pattern_id start -->
     <%= select_tag(:curl_pattern_id, options_from_collection_for_select(CurlPattern.all, :id, :number, @user.curl_pattern_id), :class => "form-control") %>
-    <!-- Input for curl_pattern_id end -->
   </div>
-  <!-- Label and input for curl_pattern_id end -->
 
-  <!-- Label and input for porosity_id start -->
   <div class="form-group">
     <label for="porosity_id">
       Porosity
     </label>
 
-    <!-- Input for porosity_id start -->
     <%= select_tag(:porosity_id, options_from_collection_for_select(Porosity.all, :id, :level, @user.porosity_id), :class => "form-control") %>
-    <!-- Input for porosity_id end -->
   </div>
-  <!-- Label and input for porosity_id end -->
 
-  <!-- Label and input for density_id start -->
   <div class="form-group">
     <label for="density_id">
       Density
     </label>
 
-    <!-- Input for density_id start -->
     <%= select_tag(:density_id, options_from_collection_for_select(Density.all, :id, :level, @user.density_id), :class => "form-control") %>
-    <!-- Input for density_id end -->
   </div>
-  <!-- Label and input for density_id end -->
 
-  <!-- Label and input for age_group_id start -->
-  <!-- Input for age_group_id start -->
   <input type="hidden" name="age_group_id" value="<%= @age_group.id %>">
-  <!-- Input for age_group_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create user

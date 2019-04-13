@@ -11,13 +11,11 @@
         </a>
       </div>
 
-      <!-- Edit link user start -->
       <div class="col">
         <a href="/users/<%= @user.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit user
         </a>
       </div>
-      <!-- Edit link user end -->
 
     </div>
 
@@ -25,34 +23,27 @@
       <dt>
         Email
       </dt>
-      <!-- Display email start -->
       <dd>
         <%= @user.email %>
       </dd>
-      <!-- Display email end -->
 
       <dt>
         Password
       </dt>
-      <!-- Display password start -->
       <dd>
         <%= @user.password %>
       </dd>
-      <!-- Display password end -->
 
       <dt>
         Username
       </dt>
-      <!-- Display username start -->
       <dd>
         <%= @user.username %>
       </dd>
-      <!-- Display username end -->
 
       <dt>
         Curl pattern
       </dt>
-      <!-- Display curl_pattern_id start -->
       <dd>
         <% if @user.curl_pattern.present? %>
           <a href="/curl_patterns/<%= @user.curl_pattern_id %>">
@@ -60,12 +51,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display curl_pattern_id end -->
 
       <dt>
         Porosity
       </dt>
-      <!-- Display porosity_id start -->
       <dd>
         <% if @user.porosity.present? %>
           <a href="/porosities/<%= @user.porosity_id %>">
@@ -73,12 +62,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display porosity_id end -->
 
       <dt>
         Density
       </dt>
-      <!-- Display density_id start -->
       <dd>
         <% if @user.density.present? %>
           <a href="/densities/<%= @user.density_id %>">
@@ -86,12 +73,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display density_id end -->
 
       <dt>
         Age group
       </dt>
-      <!-- Display age_group_id start -->
       <dd>
         <% if @user.age_group.present? %>
           <a href="/age_groups/<%= @user.age_group_id %>">
@@ -99,30 +84,24 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display age_group_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@user.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@user.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "user_templates/user_reviews" %>
@@ -134,4 +113,3 @@
     <%= render partial: "user_templates/user_products" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

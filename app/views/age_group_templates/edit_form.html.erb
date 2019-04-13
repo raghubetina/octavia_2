@@ -4,33 +4,23 @@
 
 <hr>
 
-<!-- Form age_group start -->
 <form action="/update_age_group/<%= @age_group.id %>" method="post">
-<!-- Form age_group end -->
 
-  <!-- Label and input for range start -->
   <div class="form-group">
     <label for="range">
       Range
     </label>
 
-    <!-- Input for range start -->
     <input type="text" id="range" name="range" class="form-control" value="<%= @age_group.range %>">
-    <!-- Input for range end -->
   </div>
-  <!-- Label and input for range end -->
 
-  <!-- Label and input for position start -->
   <div class="form-group">
     <label for="position">
       Position
     </label>
 
-    <!-- Input for position start -->
     <input type="text" id="position" name="position" class="form-control" value="<%= @age_group.position %>">
-    <!-- Input for position end -->
   </div>
-  <!-- Label and input for position end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update age group

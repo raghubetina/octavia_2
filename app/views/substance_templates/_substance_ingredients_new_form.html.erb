@@ -1,23 +1,14 @@
-<!-- Form ingredient start -->
 <form action="/create_ingredient_from_substance" method="post">
-<!-- Form ingredient end -->
 
-  <!-- Label and input for product_id start -->
   <div class="form-group">
     <label for="product_id">
       Product
     </label>
 
-    <!-- Input for product_id start -->
     <%= select_tag(:product_id, options_from_collection_for_select(Product.all, :id, :name, @ingredient.product_id), :class => "form-control") %>
-    <!-- Input for product_id end -->
   </div>
-  <!-- Label and input for product_id end -->
 
-  <!-- Label and input for substance_id start -->
-  <!-- Input for substance_id start -->
   <input type="hidden" name="substance_id" value="<%= @substance.id %>">
-  <!-- Input for substance_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create ingredient

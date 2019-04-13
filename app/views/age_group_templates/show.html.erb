@@ -11,67 +11,53 @@
         </a>
       </div>
 
-      <!-- Edit link age_group start -->
       <div class="col">
         <a href="/age_groups/<%= @age_group.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit age group
         </a>
       </div>
-      <!-- Edit link age_group end -->
 
-      <!-- Delete link age_group start -->
       <div class="col">
         <a href="/delete_age_group/<%= @age_group.id %>" class="btn btn-block btn-outline-secondary">
           Delete age group
         </a>
       </div>
-      <!-- Delete link age_group end -->
     </div>
 
     <dl>
       <dt>
         Range
       </dt>
-      <!-- Display range start -->
       <dd>
         <%= @age_group.range %>
       </dd>
-      <!-- Display range end -->
 
       <dt>
         Position
       </dt>
-      <!-- Display position start -->
       <dd>
         <%= @age_group.position %>
       </dd>
-      <!-- Display position end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@age_group.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@age_group.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "age_group_templates/age_group_users" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

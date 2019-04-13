@@ -11,37 +11,30 @@
         </a>
       </div>
 
-      <!-- Edit link review start -->
       <div class="col">
         <a href="/reviews/<%= @review.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit review
         </a>
       </div>
-      <!-- Edit link review end -->
 
-      <!-- Delete link review start -->
       <div class="col">
         <a href="/delete_review/<%= @review.id %>" class="btn btn-block btn-outline-secondary">
           Delete review
         </a>
       </div>
-      <!-- Delete link review end -->
     </div>
 
     <dl>
       <dt>
         Body
       </dt>
-      <!-- Display body start -->
       <dd>
         <%= @review.body %>
       </dd>
-      <!-- Display body end -->
 
       <dt>
         User
       </dt>
-      <!-- Display user_id start -->
       <dd>
         <% if @review.user.present? %>
           <a href="/users/<%= @review.user_id %>">
@@ -49,12 +42,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display user_id end -->
 
       <dt>
         Product
       </dt>
-      <!-- Display product_id start -->
       <dd>
         <% if @review.product.present? %>
           <a href="/products/<%= @review.product_id %>">
@@ -62,37 +53,28 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display product_id end -->
 
       <dt>
         Would use again
       </dt>
-      <!-- Display would_use_again start -->
       <dd>
         <%= @review.would_use_again %>
       </dd>
-      <!-- Display would_use_again end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@review.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@review.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

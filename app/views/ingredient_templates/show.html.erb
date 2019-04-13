@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link ingredient start -->
       <div class="col">
         <a href="/ingredients/<%= @ingredient.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit ingredient
         </a>
       </div>
-      <!-- Edit link ingredient end -->
 
-      <!-- Delete link ingredient start -->
       <div class="col">
         <a href="/delete_ingredient/<%= @ingredient.id %>" class="btn btn-block btn-outline-secondary">
           Delete ingredient
         </a>
       </div>
-      <!-- Delete link ingredient end -->
     </div>
 
     <dl>
       <dt>
         Product
       </dt>
-      <!-- Display product_id start -->
       <dd>
         <% if @ingredient.product.present? %>
           <a href="/products/<%= @ingredient.product_id %>">
@@ -40,12 +35,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display product_id end -->
 
       <dt>
         Substance
       </dt>
-      <!-- Display substance_id start -->
       <dd>
         <% if @ingredient.substance.present? %>
           <a href="/substances/<%= @ingredient.substance_id %>">
@@ -53,28 +46,21 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display substance_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@ingredient.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@ingredient.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

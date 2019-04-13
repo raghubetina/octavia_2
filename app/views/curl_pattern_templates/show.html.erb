@@ -11,82 +11,65 @@
         </a>
       </div>
 
-      <!-- Edit link curl_pattern start -->
       <div class="col">
         <a href="/curl_patterns/<%= @curl_pattern.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit curl pattern
         </a>
       </div>
-      <!-- Edit link curl_pattern end -->
 
-      <!-- Delete link curl_pattern start -->
       <div class="col">
         <a href="/delete_curl_pattern/<%= @curl_pattern.id %>" class="btn btn-block btn-outline-secondary">
           Delete curl pattern
         </a>
       </div>
-      <!-- Delete link curl_pattern end -->
     </div>
 
     <dl>
       <dt>
         Number
       </dt>
-      <!-- Display number start -->
       <dd>
         <%= @curl_pattern.number %>
       </dd>
-      <!-- Display number end -->
 
       <dt>
         Letter
       </dt>
-      <!-- Display letter start -->
       <dd>
         <%= @curl_pattern.letter %>
       </dd>
-      <!-- Display letter end -->
 
       <dt>
         Description
       </dt>
-      <!-- Display description start -->
       <dd>
         <%= @curl_pattern.description %>
       </dd>
-      <!-- Display description end -->
 
       <dt>
         Position
       </dt>
-      <!-- Display position start -->
       <dd>
         <%= @curl_pattern.position %>
       </dd>
-      <!-- Display position end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@curl_pattern.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@curl_pattern.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "curl_pattern_templates/curl_pattern_users" %>
@@ -98,4 +81,3 @@
     <%= render partial: "curl_pattern_templates/curl_pattern_products" %>
   </div>
 </div>
-<!-- Show Page Customization end -->
