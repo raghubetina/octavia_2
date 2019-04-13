@@ -6,6 +6,7 @@ class CurlPatternsController < ApplicationController
   end
 
   def show
+    @user = User.new
     @curl_pattern = CurlPattern.find(params.fetch("id_to_display"))
 
     render("curl_pattern_templates/show.html.erb")

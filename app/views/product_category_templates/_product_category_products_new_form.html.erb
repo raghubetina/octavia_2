@@ -1,0 +1,49 @@
+<!-- Form product start -->
+<form action="/create_product_from_product_category" method="post">
+<!-- Form product end -->
+
+  <!-- Label and input for product_category_id start -->
+  <!-- Input for product_category_id start -->
+  <input type="hidden" name="product_category_id" value="<%= @product_category.id %>">
+  <!-- Input for product_category_id end -->
+
+  <!-- Label and input for name start -->
+  <div class="form-group">
+    <label for="name">
+      Name
+    </label>
+
+    <!-- Input for name start -->
+    <input type="text" id="name" name="name" class="form-control" value="<%= @product.name %>">
+    <!-- Input for name end -->
+  </div>
+  <!-- Label and input for name end -->
+
+  <!-- Label and input for amazon_asin start -->
+  <div class="form-group">
+    <label for="amazon_asin">
+      Amazon asin
+    </label>
+
+    <!-- Input for amazon_asin start -->
+    <input type="text" id="amazon_asin" name="amazon_asin" class="form-control" value="<%= @product.amazon_asin %>">
+    <!-- Input for amazon_asin end -->
+  </div>
+  <!-- Label and input for amazon_asin end -->
+
+  <!-- Label and input for photo start -->
+  <div class="form-group">
+    <label for="photo">
+      Photo
+    </label>
+
+    <!-- Input for photo start -->
+    <input type="text" id="photo" name="photo" class="form-control" value="<%= @product.photo %>">
+    <!-- Input for photo end -->
+  </div>
+  <!-- Label and input for photo end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create product
+  </button>
+</form>

@@ -6,6 +6,7 @@ class DensitiesController < ApplicationController
   end
 
   def show
+    @user = User.new
     @density = Density.find(params.fetch("id_to_display"))
 
     render("density_templates/show.html.erb")

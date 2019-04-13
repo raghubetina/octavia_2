@@ -6,6 +6,7 @@ class PorositiesController < ApplicationController
   end
 
   def show
+    @user = User.new
     @porosity = Porosity.find(params.fetch("id_to_display"))
 
     render("porosity_templates/show.html.erb")

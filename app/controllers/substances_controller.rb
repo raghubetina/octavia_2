@@ -6,6 +6,7 @@ class SubstancesController < ApplicationController
   end
 
   def show
+    @ingredient = Ingredient.new
     @substance = Substance.find(params.fetch("id_to_display"))
 
     render("substance_templates/show.html.erb")
