@@ -1,0 +1,32 @@
+<h1>
+  Edit product category #<%= @product_category.id %>
+</h1>
+
+<hr>
+
+<!-- Form product_category start -->
+<form action="/update_product_category/<%= @product_category.id %>" method="post">
+<!-- Form product_category end -->
+
+  <!-- Label and input for name start -->
+  <div class="form-group">
+    <label for="name">
+      Name
+    </label>
+
+    <!-- Input for name start -->
+    <input type="text" id="name" name="name" class="form-control" value="<%= @product_category.name %>">
+    <!-- Input for name end -->
+  </div>
+  <!-- Label and input for name end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update product category
+  </button>
+</form>
+
+<hr>
+
+<a href="/product_categories">
+  Go back
+</a>

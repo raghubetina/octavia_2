@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Product category resource:
+
+  # CREATE
+  get("/product_categories/new", { :controller => "product_categories", :action => "new_form" })
+  post("/create_product_category", { :controller => "product_categories", :action => "create_row" })
+
+  # READ
+  get("/product_categories", { :controller => "product_categories", :action => "index" })
+  get("/product_categories/:id_to_display", { :controller => "product_categories", :action => "show" })
+
+  # UPDATE
+  get("/product_categories/:prefill_with_id/edit", { :controller => "product_categories", :action => "edit_form" })
+  post("/update_product_category/:id_to_modify", { :controller => "product_categories", :action => "update_row" })
+
+  # DELETE
+  get("/delete_product_category/:id_to_remove", { :controller => "product_categories", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Product resource:
 
   # CREATE

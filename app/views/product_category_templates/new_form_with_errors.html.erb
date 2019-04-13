@@ -1,0 +1,44 @@
+<!-- Validation failure messages -->
+<% if @product_category.present? %>
+  <% if @product_category.errors.any? %>
+    <% @product_category.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new product category
+</h1>
+
+
+<hr>
+
+<!-- Form product_category start -->
+<form action="/create_product_category" method="post">
+<!-- Form product_category end -->
+
+  <!-- Label and input for name start -->
+  <div class="form-group">
+    <label for="name">
+      Name
+    </label>
+
+    <!-- Input for name start -->
+    <input type="text" id="name" name="name" class="form-control" value="<%= @product_category.name %>">
+    <!-- Input for name end -->
+  </div>
+  <!-- Label and input for name end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create product category
+  </button>
+</form>
+
+<hr>
+
+<a href="/product_categories">
+  Go back
+</a>
