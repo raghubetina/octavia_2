@@ -1,4 +1,6 @@
 ActiveAdmin.register User do
+
+ permit_params :email, :password, :username, :curl_pattern_id, :porosity_id, :density_id, :age_group_id
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
