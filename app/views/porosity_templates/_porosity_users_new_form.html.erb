@@ -45,7 +45,7 @@
     </label>
 
     <!-- Input for curl_pattern_id start -->
-    <input type="text" id="curl_pattern_id" name="curl_pattern_id" class="form-control" value="<%= @user.curl_pattern_id %>">
+    <%= select_tag(:curl_pattern_id, options_from_collection_for_select(CurlPattern.all, :id, :number, @user.curl_pattern_id), :class => "form-control") %>
     <!-- Input for curl_pattern_id end -->
   </div>
   <!-- Label and input for curl_pattern_id end -->
