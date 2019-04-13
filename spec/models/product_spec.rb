@@ -14,6 +14,8 @@ RSpec.describe Product, type: :model do
 
     describe "InDirect Associations" do
 
+    it { should have_many(:porosities) }
+
     it { should have_many(:curl_patterns) }
 
     end
