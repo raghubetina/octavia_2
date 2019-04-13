@@ -14,6 +14,10 @@ class User < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :products,
+             :through => :reviews,
+             :source => :product
+
   # Validations
 
   # Include default devise modules. Others available are:
