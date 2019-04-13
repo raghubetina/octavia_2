@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Porosity resource:
+
+  # CREATE
+  get("/porosities/new", { :controller => "porosities", :action => "new_form" })
+  post("/create_porosity", { :controller => "porosities", :action => "create_row" })
+
+  # READ
+  get("/porosities", { :controller => "porosities", :action => "index" })
+  get("/porosities/:id_to_display", { :controller => "porosities", :action => "show" })
+
+  # UPDATE
+  get("/porosities/:prefill_with_id/edit", { :controller => "porosities", :action => "edit_form" })
+  post("/update_porosity/:id_to_modify", { :controller => "porosities", :action => "update_row" })
+
+  # DELETE
+  get("/delete_porosity/:id_to_remove", { :controller => "porosities", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Curl pattern resource:
 
   # CREATE
