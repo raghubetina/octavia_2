@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   # Direct associations
 
+  belongs_to :age_group
+
   belongs_to :density
 
   belongs_to :porosity
