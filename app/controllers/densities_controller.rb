@@ -1,6 +1,6 @@
 class DensitiesController < ApplicationController
   def index
-    @densities = Density.all
+    @densities = Density.page(params[:page]).per(10)
 
     render("density_templates/index.html.erb")
   end

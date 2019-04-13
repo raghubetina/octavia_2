@@ -1,6 +1,6 @@
 class SubstancesController < ApplicationController
   def index
-    @substances = Substance.all
+    @substances = Substance.page(params[:page]).per(10)
 
     render("substance_templates/index.html.erb")
   end

@@ -1,6 +1,6 @@
 class ProductCategoriesController < ApplicationController
   def index
-    @product_categories = ProductCategory.all
+    @product_categories = ProductCategory.page(params[:page]).per(10)
 
     render("product_category_templates/index.html.erb")
   end

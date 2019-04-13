@@ -1,6 +1,6 @@
 class PorositiesController < ApplicationController
   def index
-    @porosities = Porosity.all
+    @porosities = Porosity.page(params[:page]).per(10)
 
     render("porosity_templates/index.html.erb")
   end

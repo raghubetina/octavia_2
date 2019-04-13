@@ -1,6 +1,6 @@
 class CurlPatternsController < ApplicationController
   def index
-    @curl_patterns = CurlPattern.all
+    @curl_patterns = CurlPattern.page(params[:page]).per(10)
 
     render("curl_pattern_templates/index.html.erb")
   end
