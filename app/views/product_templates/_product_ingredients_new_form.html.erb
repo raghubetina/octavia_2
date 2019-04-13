@@ -14,7 +14,7 @@
     </label>
 
     <!-- Input for substance_id start -->
-    <input type="text" id="substance_id" name="substance_id" class="form-control" value="<%= @ingredient.substance_id %>">
+    <%= select_tag(:substance_id, options_from_collection_for_select(Substance.all, :id, :name, @ingredient.substance_id), :class => "form-control") %>
     <!-- Input for substance_id end -->
   </div>
   <!-- Label and input for substance_id end -->
