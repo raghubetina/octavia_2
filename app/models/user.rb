@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   # Direct associations
 
+  belongs_to :density
+
   belongs_to :porosity
 
   belongs_to :curl_pattern
