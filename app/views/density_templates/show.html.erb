@@ -1,0 +1,82 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Density #<%= @density.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/densities" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link density start -->
+      <div class="col">
+        <a href="/densities/<%= @density.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit density
+        </a>
+      </div>
+      <!-- Edit link density end -->
+
+      <!-- Delete link density start -->
+      <div class="col">
+        <a href="/delete_density/<%= @density.id %>" class="btn btn-block btn-outline-secondary">
+          Delete density
+        </a>
+      </div>
+      <!-- Delete link density end -->
+    </div>
+
+    <dl>
+      <dt>
+        Level
+      </dt>
+      <!-- Display level start -->
+      <dd>
+        <%= @density.level %>
+      </dd>
+      <!-- Display level end -->
+
+      <dt>
+        Description
+      </dt>
+      <!-- Display description start -->
+      <dd>
+        <%= @density.description %>
+      </dd>
+      <!-- Display description end -->
+
+      <dt>
+        Position
+      </dt>
+      <!-- Display position start -->
+      <dd>
+        <%= @density.position %>
+      </dd>
+      <!-- Display position end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@density.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@density.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

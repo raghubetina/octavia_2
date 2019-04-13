@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Density resource:
+
+  # CREATE
+  get("/densities/new", { :controller => "densities", :action => "new_form" })
+  post("/create_density", { :controller => "densities", :action => "create_row" })
+
+  # READ
+  get("/densities", { :controller => "densities", :action => "index" })
+  get("/densities/:id_to_display", { :controller => "densities", :action => "show" })
+
+  # UPDATE
+  get("/densities/:prefill_with_id/edit", { :controller => "densities", :action => "edit_form" })
+  post("/update_density/:id_to_modify", { :controller => "densities", :action => "update_row" })
+
+  # DELETE
+  get("/delete_density/:id_to_remove", { :controller => "densities", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Porosity resource:
 
   # CREATE

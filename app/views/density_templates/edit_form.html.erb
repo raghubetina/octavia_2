@@ -1,0 +1,56 @@
+<h1>
+  Edit density #<%= @density.id %>
+</h1>
+
+<hr>
+
+<!-- Form density start -->
+<form action="/update_density/<%= @density.id %>" method="post">
+<!-- Form density end -->
+
+  <!-- Label and input for level start -->
+  <div class="form-group">
+    <label for="level">
+      Level
+    </label>
+
+    <!-- Input for level start -->
+    <input type="text" id="level" name="level" class="form-control" value="<%= @density.level %>">
+    <!-- Input for level end -->
+  </div>
+  <!-- Label and input for level end -->
+
+  <!-- Label and input for description start -->
+  <div class="form-group">
+    <label for="description">
+      Description
+    </label>
+
+    <!-- Input for description start -->
+    <textarea id="description" name="description" class="form-control" rows="3"><%= @density.description %></textarea>
+    <!-- Input for description end -->
+  </div>
+  <!-- Label and input for description end -->
+
+  <!-- Label and input for position start -->
+  <div class="form-group">
+    <label for="position">
+      Position
+    </label>
+
+    <!-- Input for position start -->
+    <input type="text" id="position" name="position" class="form-control" value="<%= @density.position %>">
+    <!-- Input for position end -->
+  </div>
+  <!-- Label and input for position end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update density
+  </button>
+</form>
+
+<hr>
+
+<a href="/densities">
+  Go back
+</a>
