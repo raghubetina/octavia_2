@@ -1,6 +1,7 @@
 class DensitiesController < ApplicationController
   def index
-    @densities = Density.page(params[:page]).per(10)
+    @q = Density.ransack(params[:q])
+    @densities = @q.result(:distinct => true).includes(:users, :products).page(params[:page]).per(10)
 
     render("density_templates/index.html.erb")
   end

@@ -1,6 +1,7 @@
 class CurlPatternsController < ApplicationController
   def index
-    @curl_patterns = CurlPattern.page(params[:page]).per(10)
+    @q = CurlPattern.ransack(params[:q])
+    @curl_patterns = @q.result(:distinct => true).includes(:users, :products).page(params[:page]).per(10)
 
     render("curl_pattern_templates/index.html.erb")
   end

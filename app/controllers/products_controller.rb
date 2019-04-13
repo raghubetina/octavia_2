@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.page(params[:page]).per(10)
+    @q = Product.ransack(params[:q])
+    @products = @q.result(:distinct => true).includes(:ingredients, :reviews, :product_category, :curl_patterns, :porosities, :densities, :substances, :users).page(params[:page]).per(10)
 
     render("product_templates/index.html.erb")
   end

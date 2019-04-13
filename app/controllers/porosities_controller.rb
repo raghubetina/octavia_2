@@ -1,6 +1,7 @@
 class PorositiesController < ApplicationController
   def index
-    @porosities = Porosity.page(params[:page]).per(10)
+    @q = Porosity.ransack(params[:q])
+    @porosities = @q.result(:distinct => true).includes(:users, :products).page(params[:page]).per(10)
 
     render("porosity_templates/index.html.erb")
   end
