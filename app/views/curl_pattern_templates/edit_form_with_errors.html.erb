@@ -1,0 +1,77 @@
+<!-- Validation failure messages -->
+<% if @curl_pattern.errors.any? %>
+  <% @curl_pattern.errors.full_messages.each do |message| %>
+    <div class="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<h1>
+  Edit curl pattern #<%= @curl_pattern.id %>
+</h1>
+
+<hr>
+
+<!-- Form curl_pattern start -->
+<form action="/update_curl_pattern/<%= @curl_pattern.id %>" method="post">
+<!-- Form curl_pattern end -->
+
+  <!-- Label and input for number start -->
+  <div class="form-group">
+    <label for="number">
+      Number
+    </label>
+
+    <!-- Input for number start -->
+    <input type="text" id="number" name="number" class="form-control" value="<%= @curl_pattern.number %>">
+    <!-- Input for number end -->
+  </div>
+  <!-- Label and input for number end -->
+
+  <!-- Label and input for letter start -->
+  <div class="form-group">
+    <label for="letter">
+      Letter
+    </label>
+
+    <!-- Input for letter start -->
+    <input type="text" id="letter" name="letter" class="form-control" value="<%= @curl_pattern.letter %>">
+    <!-- Input for letter end -->
+  </div>
+  <!-- Label and input for letter end -->
+
+  <!-- Label and input for description start -->
+  <div class="form-group">
+    <label for="description">
+      Description
+    </label>
+
+    <!-- Input for description start -->
+    <textarea id="description" name="description" class="form-control" rows="3"><%= @curl_pattern.description %></textarea>
+    <!-- Input for description end -->
+  </div>
+  <!-- Label and input for description end -->
+
+  <!-- Label and input for position start -->
+  <div class="form-group">
+    <label for="position">
+      Position
+    </label>
+
+    <!-- Input for position start -->
+    <input type="text" id="position" name="position" class="form-control" value="<%= @curl_pattern.position %>">
+    <!-- Input for position end -->
+  </div>
+  <!-- Label and input for position end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update curl pattern
+  </button>
+</form>
+
+<hr>
+
+<a href="/curl_patterns">
+  Go back
+</a>
