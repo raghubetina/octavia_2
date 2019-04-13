@@ -1,6 +1,8 @@
 class Product < ApplicationRecord
   # Direct associations
 
+  belongs_to :product_category
+
   has_many   :reviews,
              :dependent => :destroy
 
