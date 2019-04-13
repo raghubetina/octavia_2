@@ -1,4 +1,6 @@
 ActiveAdmin.register Porosity do
+
+ permit_params :level, :description, :position
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
