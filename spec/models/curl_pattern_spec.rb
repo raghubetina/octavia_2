@@ -10,6 +10,8 @@ RSpec.describe CurlPattern, type: :model do
 
     describe "InDirect Associations" do
 
+    it { should have_many(:products) }
+
     end
 
     describe "Validations" do

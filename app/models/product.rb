@@ -11,6 +11,10 @@ class Product < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :curl_patterns,
+             :through => :users,
+             :source => :curl_pattern
+
   # Validations
 
 end

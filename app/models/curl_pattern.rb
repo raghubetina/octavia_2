@@ -6,6 +6,10 @@ class CurlPattern < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :products,
+             :through => :users,
+             :source => :products
+
   # Validations
 
 end
