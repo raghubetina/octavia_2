@@ -5,7 +5,7 @@
 <hr>
 
 <!-- Form product start -->
-<form action="/update_product/<%= @product.id %>" method="post">
+<form action="/update_product/<%= @product.id %>" method="post" enctype="multipart/form-data">
 <!-- Form product end -->
 
   <!-- Label and input for product_category_id start -->
@@ -51,7 +51,8 @@
     </label>
 
     <!-- Input for photo start -->
-    <input type="text" id="photo" name="photo" class="form-control" value="<%= @product.photo %>">
+    <%= cl_image_tag(@product.photo.to_s, :width => 90, :height => 90, :crop => :thumb) %>
+    <input type="file" id="photo" name="photo" class="form-control">
     <!-- Input for photo end -->
   </div>
   <!-- Label and input for photo end -->

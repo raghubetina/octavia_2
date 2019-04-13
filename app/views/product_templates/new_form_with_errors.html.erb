@@ -17,7 +17,7 @@
 <hr>
 
 <!-- Form product start -->
-<form action="/create_product" method="post">
+<form action="/create_product" method="post" enctype="multipart/form-data">
 <!-- Form product end -->
 
   <!-- Label and input for product_category_id start -->
@@ -63,7 +63,7 @@
     </label>
 
     <!-- Input for photo start -->
-    <input type="text" id="photo" name="photo" class="form-control" value="<%= @product.photo %>">
+    <input type="file" id="photo" name="photo" class="form-control">
     <!-- Input for photo end -->
   </div>
   <!-- Label and input for photo end -->

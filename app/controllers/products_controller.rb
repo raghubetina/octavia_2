@@ -25,7 +25,7 @@ class ProductsController < ApplicationController
     @product.product_category_id = params.fetch("product_category_id")
     @product.name = params.fetch("name")
     @product.amazon_asin = params.fetch("amazon_asin")
-    @product.photo = params.fetch("photo")
+    @product.photo = params.fetch("photo") if params.key?("photo")
 
     if @product.valid?
       @product.save
@@ -42,7 +42,7 @@ class ProductsController < ApplicationController
     @product.product_category_id = params.fetch("product_category_id")
     @product.name = params.fetch("name")
     @product.amazon_asin = params.fetch("amazon_asin")
-    @product.photo = params.fetch("photo")
+    @product.photo = params.fetch("photo") if params.key?("photo")
 
     if @product.valid?
       @product.save
@@ -65,7 +65,7 @@ class ProductsController < ApplicationController
     @product.product_category_id = params.fetch("product_category_id")
     @product.name = params.fetch("name")
     @product.amazon_asin = params.fetch("amazon_asin")
-    @product.photo = params.fetch("photo")
+    @product.photo = params.fetch("photo") if params.key?("photo")
 
     if @product.valid?
       @product.save
