@@ -57,7 +57,7 @@
     </label>
 
     <!-- Input for porosity_id start -->
-    <input type="text" id="porosity_id" name="porosity_id" class="form-control" value="<%= @user.porosity_id %>">
+    <%= select_tag(:porosity_id, options_from_collection_for_select(Porosity.all, :id, :level, @user.porosity_id), :class => "form-control") %>
     <!-- Input for porosity_id end -->
   </div>
   <!-- Label and input for porosity_id end -->
