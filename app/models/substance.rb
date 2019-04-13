@@ -6,6 +6,10 @@ class Substance < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :products,
+             :through => :ingredients,
+             :source => :product
+
   # Validations
 
 end

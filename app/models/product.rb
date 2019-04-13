@@ -11,6 +11,10 @@ class Product < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :substances,
+             :through => :ingredients,
+             :source => :substance
+
   has_many   :densities,
              :through => :users,
              :source => :density
