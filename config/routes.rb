@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "curl_patterns#index"
   # Routes for the Review resource:
 
   # CREATE
