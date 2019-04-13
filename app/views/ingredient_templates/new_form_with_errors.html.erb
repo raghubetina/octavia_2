@@ -1,0 +1,56 @@
+<!-- Validation failure messages -->
+<% if @ingredient.present? %>
+  <% if @ingredient.errors.any? %>
+    <% @ingredient.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new ingredient
+</h1>
+
+
+<hr>
+
+<!-- Form ingredient start -->
+<form action="/create_ingredient" method="post">
+<!-- Form ingredient end -->
+
+  <!-- Label and input for product_id start -->
+  <div class="form-group">
+    <label for="product_id">
+      Product
+    </label>
+
+    <!-- Input for product_id start -->
+    <input type="text" id="product_id" name="product_id" class="form-control" value="<%= @ingredient.product_id %>">
+    <!-- Input for product_id end -->
+  </div>
+  <!-- Label and input for product_id end -->
+
+  <!-- Label and input for substance_id start -->
+  <div class="form-group">
+    <label for="substance_id">
+      Substance
+    </label>
+
+    <!-- Input for substance_id start -->
+    <input type="text" id="substance_id" name="substance_id" class="form-control" value="<%= @ingredient.substance_id %>">
+    <!-- Input for substance_id end -->
+  </div>
+  <!-- Label and input for substance_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create ingredient
+  </button>
+</form>
+
+<hr>
+
+<a href="/ingredients">
+  Go back
+</a>
