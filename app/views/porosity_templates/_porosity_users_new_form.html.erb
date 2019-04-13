@@ -62,7 +62,7 @@
     </label>
 
     <!-- Input for density_id start -->
-    <input type="text" id="density_id" name="density_id" class="form-control" value="<%= @user.density_id %>">
+    <%= select_tag(:density_id, options_from_collection_for_select(Density.all, :id, :level, @user.density_id), :class => "form-control") %>
     <!-- Input for density_id end -->
   </div>
   <!-- Label and input for density_id end -->
