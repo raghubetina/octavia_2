@@ -34,7 +34,11 @@
       </dt>
       <!-- Display product_id start -->
       <dd>
-        <%= @ingredient.product_id %>
+        <% if @ingredient.product.present? %>
+          <a href="/products/<%= @ingredient.product_id %>">
+            <%= @ingredient.product.name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display product_id end -->
 
@@ -43,7 +47,11 @@
       </dt>
       <!-- Display substance_id start -->
       <dd>
-        <%= @ingredient.substance_id %>
+        <% if @ingredient.substance.present? %>
+          <a href="/substances/<%= @ingredient.substance_id %>">
+            <%= @ingredient.substance.name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display substance_id end -->
 

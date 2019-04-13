@@ -54,7 +54,11 @@
       </dt>
       <!-- Display curl_pattern_id start -->
       <dd>
-        <%= @user.curl_pattern_id %>
+        <% if @user.curl_pattern.present? %>
+          <a href="/curl_patterns/<%= @user.curl_pattern_id %>">
+            <%= @user.curl_pattern.number %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display curl_pattern_id end -->
 
@@ -63,7 +67,11 @@
       </dt>
       <!-- Display porosity_id start -->
       <dd>
-        <%= @user.porosity_id %>
+        <% if @user.porosity.present? %>
+          <a href="/porosities/<%= @user.porosity_id %>">
+            <%= @user.porosity.level %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display porosity_id end -->
 
@@ -72,7 +80,11 @@
       </dt>
       <!-- Display density_id start -->
       <dd>
-        <%= @user.density_id %>
+        <% if @user.density.present? %>
+          <a href="/densities/<%= @user.density_id %>">
+            <%= @user.density.level %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display density_id end -->
 
@@ -81,7 +93,11 @@
       </dt>
       <!-- Display age_group_id start -->
       <dd>
-        <%= @user.age_group_id %>
+        <% if @user.age_group.present? %>
+          <a href="/age_groups/<%= @user.age_group_id %>">
+            <%= @user.age_group.range %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display age_group_id end -->
 

@@ -96,25 +96,41 @@
 
         <!-- Display user.curl_pattern_id start -->
         <td>
-          <%= user.curl_pattern.number %>
+          <% if user.curl_pattern.present? %>
+            <a href="/curl_patterns/<%= user.curl_pattern.id %>">
+              <%= user.curl_pattern.number %>
+            </a>
+          <% end %>
         </td>
         <!-- Display user.curl_pattern_id end -->
 
         <!-- Display user.porosity_id start -->
         <td>
-          <%= user.porosity.level %>
+          <% if user.porosity.present? %>
+            <a href="/porosities/<%= user.porosity.id %>">
+              <%= user.porosity.level %>
+            </a>
+          <% end %>
         </td>
         <!-- Display user.porosity_id end -->
 
         <!-- Display user.density_id start -->
         <td>
-          <%= user.density.level %>
+          <% if user.density.present? %>
+            <a href="/densities/<%= user.density.id %>">
+              <%= user.density.level %>
+            </a>
+          <% end %>
         </td>
         <!-- Display user.density_id end -->
 
         <!-- Display user.age_group_id start -->
         <td>
-          <%= user.age_group.range %>
+          <% if user.age_group.present? %>
+            <a href="/age_groups/<%= user.age_group.id %>">
+              <%= user.age_group.range %>
+            </a>
+          <% end %>
         </td>
         <!-- Display user.age_group_id end -->
 

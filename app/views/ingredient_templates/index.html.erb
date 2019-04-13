@@ -58,13 +58,21 @@
 
         <!-- Display ingredient.product_id start -->
         <td>
-          <%= ingredient.product.name %>
+          <% if ingredient.product.present? %>
+            <a href="/products/<%= ingredient.product.id %>">
+              <%= ingredient.product.name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display ingredient.product_id end -->
 
         <!-- Display ingredient.substance_id start -->
         <td>
-          <%= ingredient.substance.name %>
+          <% if ingredient.substance.present? %>
+            <a href="/substances/<%= ingredient.substance.id %>">
+              <%= ingredient.substance.name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display ingredient.substance_id end -->
 

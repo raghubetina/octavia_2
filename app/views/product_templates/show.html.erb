@@ -34,7 +34,11 @@
       </dt>
       <!-- Display product_category_id start -->
       <dd>
-        <%= @product.product_category_id %>
+        <% if @product.product_category.present? %>
+          <a href="/product_categories/<%= @product.product_category_id %>">
+            <%= @product.product_category.name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display product_category_id end -->
 
