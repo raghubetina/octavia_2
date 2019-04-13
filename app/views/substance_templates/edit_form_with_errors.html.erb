@@ -1,0 +1,41 @@
+<!-- Validation failure messages -->
+<% if @substance.errors.any? %>
+  <% @substance.errors.full_messages.each do |message| %>
+    <div class="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<h1>
+  Edit substance #<%= @substance.id %>
+</h1>
+
+<hr>
+
+<!-- Form substance start -->
+<form action="/update_substance/<%= @substance.id %>" method="post">
+<!-- Form substance end -->
+
+  <!-- Label and input for name start -->
+  <div class="form-group">
+    <label for="name">
+      Name
+    </label>
+
+    <!-- Input for name start -->
+    <input type="text" id="name" name="name" class="form-control" value="<%= @substance.name %>">
+    <!-- Input for name end -->
+  </div>
+  <!-- Label and input for name end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update substance
+  </button>
+</form>
+
+<hr>
+
+<a href="/substances">
+  Go back
+</a>

@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Substance resource:
+
+  # CREATE
+  get("/substances/new", { :controller => "substances", :action => "new_form" })
+  post("/create_substance", { :controller => "substances", :action => "create_row" })
+
+  # READ
+  get("/substances", { :controller => "substances", :action => "index" })
+  get("/substances/:id_to_display", { :controller => "substances", :action => "show" })
+
+  # UPDATE
+  get("/substances/:prefill_with_id/edit", { :controller => "substances", :action => "edit_form" })
+  post("/update_substance/:id_to_modify", { :controller => "substances", :action => "update_row" })
+
+  # DELETE
+  get("/delete_substance/:id_to_remove", { :controller => "substances", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Product category resource:
 
   # CREATE
