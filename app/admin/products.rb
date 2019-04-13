@@ -1,4 +1,6 @@
 ActiveAdmin.register Product do
+
+ permit_params :product_category_id, :name, :amazon_asin, :photo
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
