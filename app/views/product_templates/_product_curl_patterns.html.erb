@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    Curl Patterns
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <% @product.curl_patterns.each do |curl_pattern| %>
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <!-- Show link start -->
+        <a href="/curl_patterns/<%= curl_pattern.id %>">
+          <%= curl_pattern.number %>
+        </a>
+        <!-- Show link end -->
+
+      </li>
+    <% end %>
+
+  </ul>
+</div>

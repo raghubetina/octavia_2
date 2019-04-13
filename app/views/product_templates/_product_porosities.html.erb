@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    Porosities
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <% @product.porosities.each do |porosity| %>
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <!-- Show link start -->
+        <a href="/porosities/<%= porosity.id %>">
+          <%= porosity.level %>
+        </a>
+        <!-- Show link end -->
+
+      </li>
+    <% end %>
+
+  </ul>
+</div>
